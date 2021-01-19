@@ -3,7 +3,6 @@ const todo = require('./todo/todo');
 const colors = require('colors');
 
 let command = argv._[0];
-let id = argv._[1];
 switch (command) {
     case 'create':
         let task = todo.create(argv.description)
