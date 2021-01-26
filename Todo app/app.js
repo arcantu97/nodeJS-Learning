@@ -9,10 +9,10 @@ switch (command) {
         let task = todo.create(argv.description)
         break;
     case 'delete':
-        console.log('Delete task');
+        let dTask = todo.deleteTask(argv.index)
         break;
     case 'update':
-        console.log('Updating task...');
+        let uTask = todo.updateTask(argv.index, argv.status)
         break;
     case 'show':
         let tasks = todo.readTasks();

@@ -7,15 +7,22 @@ const argv = require('yargs')
         }
     })
     .command('update', 'Update task status', {
-        description: {
+        index: {
             demand: true,
-            alias: 'd',
-            desc: 'Description from task'
+            alias: 'i',
+            desc: 'Index from task'
         },
-        completed: {
+        status: {
             default: true,
-            alias: 'c',
-            desc: 'Task details'
+            alias: 's',
+            desc: 'Task status'
+        }
+    })
+    .command('delete', 'Delete task', {
+        index: {
+            demand: true,
+            alias: 'i',
+            desc: 'Index from task'
         }
     })
     .help()
